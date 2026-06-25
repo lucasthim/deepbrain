@@ -24,6 +24,7 @@ setup(name="deepbrain",
       keywords="deep-learning machine-learning tensorflow ai",
       scripts=["bin/deepbrain-extractor"],
       packages=["deepbrain"],
+      package_data={"deepbrain": ["models/*.pb"]},  # ship frozen graphs inside the wheel
       license="MIT",
       platforms="any",
       install_requires=required, # Automatically download dependencies on requirements.txt
